@@ -12,7 +12,7 @@ import com.pruebas.modelo.Jugador;
 @Controller
 //@SessionAttributes("jugador") No nos sirve ahora
 public class JugadorControl0 {
-
+//Cambio
 	@GetMapping("/datos")
 	public String formulario(Model model) {
 		model.addAttribute("nombre","Nombre");
