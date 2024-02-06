@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Ejercicio 1</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
+	</head>	
+	<body>
+		<p th:text="${jugador.nombre}"></p>
+		<p th:text="${jugador.ape1}"></p>
+		<p th:text="${jugador.email}"></p>
+		<p th:text="${jugador.genero}"></p>
+		<!--<p th:if="${jugador.aleEnf[0]==null}">No Alergia</p>  Tengo que en la clase jugador dar el valor por defecto en el constructor para que obtenga una respuesta si es falso--> 
+		<p th:if="${jugador.aleEnf[0]}">Si Alergia</p>
+		<!--<p th:if="${jugador.aleEnf[1]==null}">No Enfermedad</p>-->
+		<p th:if="${jugador.aleEnf[1]}">Si Enfermedad</p>
+		<p th:text="${jugador.curso}"></p>
+		<img th:src="@{/img/img1.jpg}" />
+	</body>
+	
+	
+</html>

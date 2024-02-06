@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Ejercicio 1</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"></link>
+	</head>	
+	<body>
+		<form th:action="@{recepcionDatos}" th:object="${jugador}" method="post">
+			
+			<label for="name" th:text="${nombre}"></label></br>
+			<input id="name" name="nombre" type="text" th:placeholder="${exname}"/></br>
+			
+			<label for="ape1" th:text="${ape1}"></label></br>
+			<input id="ape1" name="ape1" type="text" th:placeholder="${exape1}"/></br>
+			
+			<label for="email" th:text="${email}"></label></br>
+			<input id="email" name="email" type="email" th:placeholder="${exemail}"/></br>
+			
+			
+			<label th:text="${hombre}"></label>
+			<input type="radio" value="hombre" name="genero">
+			<label  th:text="${mujer}"></label>
+			<input type="radio" value="mujer" name="genero"></br>
+        	
+       
+			<label th:text="${aleEnf}"></label>
+        	<p>Alergia?<input type="checkbox"  name="aleEnf"></p>
+        	<p>Enfermedad?<input type="checkbox"  name="aleEnf"></p></br>
+        	
+        	<label for="seleccion" th:text="${curso}"></label>
+        		<select id="seleccion" name="curso">
+            		<option value="2Bach" th:text="${curso1}"></option>
+            		<option value="1Bach" th:text="${curso2}"></option>
+            		<option value="4Eso" th:text="${curso3}"></option>
+        		</select></br>
+        <input type="submit" value="Enviar">
+		</form>
+	</body>
+	
+	
+</html>
